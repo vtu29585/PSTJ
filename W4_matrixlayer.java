@@ -18,58 +18,57 @@ public class Main {
             int left = layer;
             int right = cols - 1 - layer;
 
-            // Top row
+         
             for (int j = left; j <= right; j++) {
                 list.add(matrix[top][j]);
             }
 
-            // Right column
+           
             for (int i = top + 1; i <= bottom; i++) {
                 list.add(matrix[i][right]);
             }
 
-            // Bottom row
+          
             for (int j = right - 1; j >= left; j--) {
                 list.add(matrix[bottom][j]);
             }
 
-            // Left column
+     
             for (int i = bottom - 1; i > top; i--) {
                 list.add(matrix[i][left]);
             }
 
-            // Number of useful rotations
+   
             int rotation = r % list.size();
 
-            // Put rotated values back
+         
             int index = rotation;
 
-            // Top row
+            
             for (int j = left; j <= right; j++) {
                 matrix[top][j] = list.get(index);
                 index = (index + 1) % list.size();
             }
 
-            // Right column
             for (int i = top + 1; i <= bottom; i++) {
                 matrix[i][right] = list.get(index);
                 index = (index + 1) % list.size();
             }
 
-            // Bottom row
+           
             for (int j = right - 1; j >= left; j--) {
                 matrix[bottom][j] = list.get(index);
                 index = (index + 1) % list.size();
             }
 
-            // Left column
+           
             for (int i = bottom - 1; i > top; i--) {
                 matrix[i][left] = list.get(index);
                 index = (index + 1) % list.size();
             }
         }
 
-        // Print matrix
+     
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 System.out.print(matrix[i][j] + " ");
