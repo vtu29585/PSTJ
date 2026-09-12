@@ -3,7 +3,7 @@ class Solution {
 
         int index = 0;
 
-        // Move all non-zero elements to the front
+     
         for (int i = 0; i < nums.length; i++) {
 
             if (nums[i] != 0) {
@@ -12,7 +12,7 @@ class Solution {
             }
         }
 
-        // Fill the remaining positions with 0
+        
         while (index < nums.length) {
             nums[index] = 0;
             index++;
