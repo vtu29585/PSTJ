@@ -14,24 +14,24 @@ public class Main {
 
             int n = s.length();
 
-            // Frequency arrays for both halves
+           
             int[] left = new int[26];
             int[] right = new int[26];
 
-            // Find middle
+
             int half = n / 2;
 
-            // Count left half
+
             for (int i = 0; i < half; i++) {
                 left[s.charAt(i) - 'a']++;
             }
 
-            // Count right half
+            
             for (int i = (n + 1) / 2; i < n; i++) {
                 right[s.charAt(i) - 'a']++;
             }
 
-            // Compare frequencies
+          
             boolean lapindrome = true;
 
             for (int i = 0; i < 26; i++) {
