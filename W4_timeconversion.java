@@ -3,7 +3,7 @@ import java.util.*;
 public class Main {
 
     public static String timeConversion(String s) {
-        String period = s.substring(8, 10); // AM or PM
+        String period = s.substring(8, 10); 
         int hour = Integer.parseInt(s.substring(0, 2));
 
         if (period.equals("AM")) {
