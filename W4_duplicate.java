@@ -7,16 +7,14 @@ class Solution {
 
         for (int num : nums) {
 
-            // If number is already present
             if (set.contains(num)) {
                 return true;
             }
 
-            // Add number to set
+           
             set.add(num);
         }
 
-        // No duplicate found
         return false;
     }
 }
