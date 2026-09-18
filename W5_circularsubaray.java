@@ -11,23 +11,23 @@ class Solution {
 
         for (int num : nums) {
 
-            // Maximum subarray sum
+          
             currentMax = Math.max(num, currentMax + num);
             maxSum = Math.max(maxSum, currentMax);
 
-            // Minimum subarray sum
+            
             currentMin = Math.min(num, currentMin + num);
             minSum = Math.min(minSum, currentMin);
 
             totalSum += num;
         }
 
-        // All elements are negative
+        
         if (maxSum < 0) {
             return maxSum;
         }
 
-        // Maximum circular subarray sum
+   
         int circularSum = totalSum - minSum;
 
         return Math.max(maxSum, circularSum);
