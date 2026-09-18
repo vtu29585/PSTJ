@@ -4,7 +4,6 @@ public class W5_maxsubarray {
 
     static int[] maxSubarray(int[] arr) {
 
-        // Maximum subarray sum using Kadane's Algorithm
         int maxSubarray = arr[0];
         int currentSum = arr[0];
 
@@ -13,7 +12,7 @@ public class W5_maxsubarray {
             maxSubarray = Math.max(maxSubarray, currentSum);
         }
 
-        // Maximum subsequence sum
+     
         int maxSubsequence = 0;
         int largest = arr[0];
 
@@ -25,7 +24,6 @@ public class W5_maxsubarray {
             largest = Math.max(largest, x);
         }
 
-        // If all numbers are negative
         if (maxSubsequence == 0) {
             maxSubsequence = largest;
         }
