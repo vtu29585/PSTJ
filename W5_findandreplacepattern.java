@@ -21,12 +21,12 @@ class Solution {
             char p = pattern.charAt(i);
             char w = word.charAt(i);
 
-            // pattern -> word
+     
             if (map1[p - 'a'] != '\0' && map1[p - 'a'] != w) {
                 return false;
             }
 
-            // word -> pattern
+            
             if (map2[w - 'a'] != '\0' && map2[w - 'a'] != p) {
                 return false;
             }
